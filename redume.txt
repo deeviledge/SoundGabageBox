@@ -1,0 +1,53 @@
+＜自動ログインの処理＞
+
+1.オートログインの設定
+Raspberry Piを起動した時に、ユーザーアカウントや、パスワードを入力しなくても自動的にログイン
+電源を入れた後にホーム画面に自動的に移行する
+
+viで/etc/inittabを編集。
+$ sudo vi /etc/inittab
+
+1:2345:respawn:/sbin/getty 38400 tty1
+の行を#でコメントアウトします。
+
+かわりに***********************************************************
+1:2345:respawn:/bin/login -f pi tty1 </dev/tty1>/dev/tty1 2>&1
+*****************************************************************
+を新たに書き込む(piの部分はユーザー名）
+
+
+保存して再起動すると、Raspberry Piがオートログインします
+
+
+＜プログラムの自動起動処理＞
+
+viでrc.localファイルを開いて編集する
+→$sudo vi /etc/rc.local
+
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+ 
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+printf "My IP address is %s\n" "$_IP"
+jsay "$_IP"
+jsay "マグボットシステム起動　完了しました"
+fi
+ 
+
+exit 0
+
+のexit0のすぐ前にpythonプログラムの実行処理を書き込む
+→sudo python /home/pi/okumura/ad.py &
+
