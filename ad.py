@@ -124,6 +124,6 @@ while True:
 
             break	
 
-		mem[ch] = value
+        mem[ch] = value
 
     #sys.stdout.write("\n")
