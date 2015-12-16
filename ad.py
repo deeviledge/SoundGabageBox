@@ -117,12 +117,12 @@ while True:
             while st + play_time > time.time():
                 time.sleep( 1 )
 
-	    	pygame.mixer.music.stop()
+	        pygame.mixer.music.stop()
 
-	    	for i in range(chs):
+	        for i in range(chs):
 	        	mem[i] = -1
 
-	    	break	
+	        break	
 
 		mem[ch] = value
 
