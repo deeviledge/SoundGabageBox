@@ -72,26 +72,26 @@ while True:
             GPIO.output(spi_clk, False)
 
         GPIO.output(spi_ss, True)
-	#print " "
-		if mem[ch] == -1:
-	    	mem[ch] = value
-	    	continue
+        #print " "
+        if mem[ch] == -1:
+            mem[ch] = value
+            continue
 
         # 測定結果を標準出力
        	# sys.stdout.write(str(value))
 
        	#sys.stdout.write(str(mem[ch] - value))
         if ch > 0:
-	    	pass
+            pass
             #sys.stdout.write(" ")
        	    # sys.stdout.write(str(mem[ch] - value))
 
 
         if (mem[ch] - value > 500):
-	    	#sys.stdout.write(str(ii)+"\n")
-	    	ii += 1
-	    	pygame.mixer.init()
-	    	sound_flg=random.randint(1,5)
+            #sys.stdout.write(str(ii)+"\n")
+            ii += 1
+            pygame.mixer.init()
+            sound_flg=random.randint(1,5)
             if sound_flg==1:
             	pygame.mixer.music.load("/home/pi/okumura/drop1.mp3")
             	pygame.mixer.music.set_volume(play_volume/100)
