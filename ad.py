@@ -92,7 +92,7 @@ while True:
 	    	ii += 1
 	    	pygame.mixer.init()
 	    	sound_flg=random.randint(1,5)
-	    	if sound_flg==1:
+			if sound_flg==1:
             	pygame.mixer.music.load("/home/pi/okumura/drop1.mp3")
             	pygame.mixer.music.set_volume(play_volume/100)
             	pygame.mixer.music.play( -1 )
