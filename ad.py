@@ -84,9 +84,7 @@ while True:
         if ch > 0:
             pass
             #sys.stdout.write(" ")
-       	    # sys.stdout.write(str(mem[ch] - value))
-
-
+            # sys.stdout.write(str(mem[ch] - value))
         if (mem[ch] - value > 500):
             #sys.stdout.write(str(ii)+"\n")
             ii += 1
