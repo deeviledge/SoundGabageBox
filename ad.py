@@ -87,9 +87,9 @@ while True:
             # sys.stdout.write(str(mem[ch] - value))
         if (mem[ch] - value > 500):
             #sys.stdout.write(str(ii)+"\n")
-            ii += 1
-            pygame.mixer.init()
-            sound_flg=random.randint(1,5)
+		    ii += 1
+		    pygame.mixer.init()
+		    sound_flg=random.randint(1,5)
             if sound_flg==1:
             	pygame.mixer.music.load("/home/pi/okumura/drop1.mp3")
             	pygame.mixer.music.set_volume(play_volume/100)
