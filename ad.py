@@ -91,11 +91,11 @@ while True:
 		    pygame.mixer.init()
 		    sound_flg=random.randint(1,5)
             if sound_flg==1:
-            	pygame.mixer.music.load("/home/pi/okumura/drop1.mp3")
+            	pygame.mixer.music.load("/home/pi/SoundGabageBox/drop1.mp3")
             	pygame.mixer.music.set_volume(play_volume/100)
             	pygame.mixer.music.play( -1 )
             elif sound_flg==2:
-            	pygame.mixer.music.load("/home/pi/okumura/drop2.mp3")
+            	pygame.mixer.music.load("/home/pi/SoundGabageBox/drop2.mp3")
             	pygame.mixer.music.set_volume(play_volume/100)
             	pygame.mixer.music.play( -1 )
             elif sound_flg==3:
