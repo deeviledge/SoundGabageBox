@@ -95,15 +95,15 @@ while True:
             	pygame.mixer.music.set_volume(play_volume/100)
             	pygame.mixer.music.play( -1 )
             elif sound_flg==2:
-            	pygame.mixer.music.load("/home/pi/SoundGabageBox/mgs03.mp3")
+            	pygame.mixer.music.load("/home/pi/SoundGabageBox/mgs031.mp3")
             	pygame.mixer.music.set_volume(play_volume/100)
             	pygame.mixer.music.play( -1 )
             elif sound_flg==3:
-            	pygame.mixer.music.load("/home/pi/SoundGabageBox/mgs02.mp3")
+            	pygame.mixer.music.load("/home/pi/SoundGabageBox/mgs021.mp3")
             	pygame.mixer.music.set_volume(play_volume/100)
             	pygame.mixer.music.play( -1 )
             elif sound_flg==4:
-            	pygame.mixer.music.load("/home/pi/SoundGabageBox/mgs01.mp3")
+            	pygame.mixer.music.load("/home/pi/SoundGabageBox/mgs011.mp3")
             	pygame.mixer.music.set_volume(play_volume/100)
             	pygame.mixer.music.play( -1 )
             else:
